@@ -12,15 +12,15 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 100%;
 }
 
 .container{
     background-color: white;
-    width: 35rem;
+    width: 35em;
     height: fit-content;
     min-height: 8rem;
+    position: absolute;
+    top: 25%;
     border-radius: 2em;
     display: flex;
     justify-content: center;
@@ -28,6 +28,21 @@ body{
     flex-direction: column;
     gap: 1em;
     padding: 2em 0em;
+}
+
+@media only screen and (max-width: 450px) {
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        scale: 0.85;
+        background-color: white;
+    }
+
+    .container{
+        width: fit-content;
+        position: relative;
+    }
 }
 
 .search-wrapper{
@@ -79,16 +94,18 @@ body{
     width: 25em;
     gap: 0.5em;
     padding: 1em;
-    border-radius: 1em;
-    background-color: rgba(0, 38, 255, 0.397);
+    border-top: solid black 2px;
 }
 
 .data h4{
     font-family: sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
 }
 
 span{
     font-family: sans-serif;
     font-weight: 300;
     padding-left: 0.5em;
+    font-size: 0.9em;
 }
